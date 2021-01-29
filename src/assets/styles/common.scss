@@ -1,0 +1,199 @@
+@import './normalize.css';
+
+@mixin prefix($property, $value) {
+  -webkit-#{$property}: $value;
+  -moz-#{$property}: $value;
+  -o-#{$property}: $value;
+  #{$property}: $value;
+}
+
+* {
+	-webkit-overflow-scrolling: touch;
+	/*ios 弹性滚动*/
+	box-sizing: border-box;
+	/*隐藏 ios click 背景灰色区域*/
+	@include prefix(tap-highlight-color, rgba(0, 0, 0, 0));
+}
+
+html,
+body,
+div,
+span,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+address,
+big,
+cite,
+code,
+del,
+em,
+font,
+img,
+ins,
+small,
+strong,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+input {
+	margin: 0;
+	padding: 0;
+}
+
+/*iOS禁止微信内置浏览器修改字体大小*/
+
+body {
+	-webkit-text-size-adjust: 100% !important;
+	text-size-adjust: 100% !important;
+	-moz-text-size-adjust: 100% !important;
+
+	background: #fff;
+	min-width: 320px;
+	max-width: 750px;
+	margin: 0 auto;
+	color: #848484;
+	font: 14px/1.5 'Helvetica Neue', 'Helvetica', 'sans-serif', 'Microsoft Yahei',
+		'helvetica', 'arial';
+	overflow-x: hidden;
+}
+
+ol,
+ul {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+[v-cloak] {
+	display: none;
+}
+
+/* begin tc-player相关样式设置*/
+
+embed {
+	display: none;
+}
+
+/* begin tc-player相关样式设置*/
+
+html {
+	font-family: 'PingFang';
+	width: 100%;
+	overflow-x: hidden;
+}
+
+body {
+	/* position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    max-width: 10rem;*/
+	/*body不能设置scrolling：touch,会出现IOS顶部，底部边界继续滑动会遮挡fix元素的bug*/
+	-webkit-overflow-scrolling: initial;
+	background-color: #efeff4;
+}
+
+.page {
+	/*position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;*/
+	.content {
+		width: 100%;
+	}
+	.J_Wrapper {
+		min-height: 100%;
+	}
+}
+
+::-webkit-input-placeholder {
+	color: #ccc;
+	font-weight: normal;
+}
+
+::-moz-placeholder {
+	color: #ccc;
+	font-weight: normal;
+}
+
+:-moz-placeholder {
+	color: #ccc;
+	font-weight: normal;
+}
+
+.share-cover {
+	img {
+		width: 100%;
+	}
+}
+
+.text-align-left {
+	text-align: left !important;
+}
+
+.text-align-center {
+	text-align: center !important;
+}
+
+.text-align-right {
+	text-align: right !important;
+}
+
+.width-600 {
+	width: pxToRem(600);
+	margin: 0 auto;
+}
+
+.clearfix {
+	&:after {
+		display: block;
+		content: '';
+		clear: both;
+	}
+}
+
+.strong {
+	font-weight: bold;
+}
+
+.text-justify {
+	-moz-text-align: justify;
+	-webkit-text-align: justify;
+	text-align: justify;
+	-moz-text-align-last: justify;
+	-webkit-text-align-last: justify;
+	text-align-last: justify;
+	width: pxToRem(120);
+	display: inline-block;
+}
+
