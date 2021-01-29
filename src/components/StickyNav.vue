@@ -309,6 +309,7 @@ export default {
         if (!componentId) {
           continue;
         }
+        console.log("🚀 ~ file: StickyNav.vue ~ line 313 ~ createSectionNavMap ~ this.navs", this.navs)
         const navIndex = this.navs.findIndex(nav => {
           const id = nav.id;
           return id === componentId;

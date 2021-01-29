@@ -7,7 +7,7 @@
         :key="item.id"
         :component-id="item.id"
         :component-type="item.type">
-        <div v-if="item.type === 'list'" class="item-list">
+        <div v-if="item.type === 'list'" class="item">
           {{item.id}}
         </div>
         <sticky-nav v-if="item.type === 'menu'" :menu="menu" :options="stickyOptions"></sticky-nav>
@@ -53,28 +53,28 @@ export default {
       menu: {
         positionType: 'fixed',
         menuType: 1,
-        textColor: '#fff',
+        textColor: '#333333',
         bgColor: '#ff8a8a',
         list: [
           {
             title: '导航1',
-            id: 1000,
+            id: '1000',
           },
           {
             title: '导航2',
-            id: 1001,
+            id: '1001',
           },
           {
             title: '导航3',
-            id: 1002,
+            id: '1002',
           },
           {
             title: '导航4',
-            id: 1003,
+            id: '1003',
           },
           {
             title: '导航5',
-            id: 1004,
+            id: '1004',
           },
         ]
       },
@@ -122,8 +122,8 @@ export default {
 .list-item {
   font-size: 0;
 }
-.item-list {
-  height: 400px;
+.item {
+  height: 1500px;
   display: flex;
   justify-content: center;
   align-items: center;
