@@ -1,11 +1,11 @@
 <template>
   <div
     class="sticky-nav-container"
-    :style="`--text-color: ${menu.textColor}`"
+    :style="`--text-color: ${menu.textColor}; background: ${menu.bgColor};`"
     :class="{ 'text-height': menu.menuType === 1, 'image-height': menu.menuType === 0 }">
     <div
       :class="{ 'sticky-nav-fixed': sticky && enableFixed }"
-      :style="`top: ${stickyOptions.stickyTop}px; z-index: ${stickyOptions.zIndex}; background: ${menu.bgColor}`">
+      :style="`top: ${stickyOptions.stickyTop}px; z-index: ${stickyOptions.zIndex}; background: ${menu.bgColor};`">
       <span
         v-if="showButton"
         class="stickyNav-expand"
@@ -309,7 +309,6 @@ export default {
         if (!componentId) {
           continue;
         }
-        console.log("🚀 ~ file: StickyNav.vue ~ line 313 ~ createSectionNavMap ~ this.navs", this.navs)
         const navIndex = this.navs.findIndex(nav => {
           const id = nav.id;
           return id === componentId;
